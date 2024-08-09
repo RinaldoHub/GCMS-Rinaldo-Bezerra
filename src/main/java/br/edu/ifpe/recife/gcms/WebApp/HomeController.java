@@ -21,8 +21,8 @@ public class HomeController {
 		return "Hello, Teste + Teste2!";
 	}
 	
-	@RequestMapping("/hotfixmain")
-	public @ResponseBody String greetingHotfixMain() {
-		return "Hello, Hotfix na main!";
+	@RequestMapping("/hotfix")
+	public @ResponseBody String greetingHotfix() {
+		return "Hello, Hotfix main + branch!";
 	}
 }

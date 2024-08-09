@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.MockMvc;
 class WebAppApplicationTests {
 	@Autowired
 	private MockMvc mockMvc;
+	
 	@Test
 	public void shouldReturnDefaultMessage() throws Exception {
 		this.mockMvc.perform(get("/"))
@@ -27,12 +28,12 @@ class WebAppApplicationTests {
 	}
 	
 	@Test
-	public void shouldReturnHotfixMain() throws Exception {
-		this.mockMvc.perform(get("/hotfixmain"))
+	public void shouldReturnHotfix() throws Exception {
+		this.mockMvc.perform(get("/hotfix"))
 
 		.andDo(print()).andExpect(status().isOk())
 		.andExpect(content()
-		.string(containsString("Hello, Hotfix na main")));
+		.string(containsString("Hello, Hotfix main + branch!")));
 
 	}
 }
