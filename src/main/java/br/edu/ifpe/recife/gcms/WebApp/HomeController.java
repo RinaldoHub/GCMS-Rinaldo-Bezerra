@@ -20,4 +20,9 @@ public class HomeController {
 	public @ResponseBody String greetingTeste() {
 		return "Hello, Teste + Teste2!";
 	}
+	
+	@RequestMapping("/hotfixmain")
+	public @ResponseBody String greetingHotfixMain() {
+		return "Hello, Hotfix na main!";
+	}
 }
