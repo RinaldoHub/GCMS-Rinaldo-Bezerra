@@ -17,6 +17,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    container:
+      image: docker://rinaldohub/gcms-rinaldo-ferreira:webapp
     permissions:
       contents: read
 
